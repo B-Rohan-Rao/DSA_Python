@@ -1,0 +1,27 @@
+There are two methods in which we can represent the graphs. adjacency matrix and adjacency list.
+eg -> A circular, closed graph with no given weight and bidirectional edges with 4 vertices can be represented as
+Adjacency matrix ->        A   B   C   D
+                        A| 0 | 1 | 0 | 1 |
+                        B| 1 | 0 | 1 | 0 |
+                        C| 0 | 1 | 0 | 1 |
+                        D| 1 | 0 | 1 | 0 |
+
+Adjacency list ->    {
+                         'A':['B','D'],
+                         'B':['A','C'],
+                         'C':['B','D'],
+                         'D':['C','E']
+                      }
+
+
+Time complexity ->
+Inserting : Adjacency matrix -> O(|V|^2)       , As we need to store each and every other vertices in the matrix
+             Adjacency List ->   O(1)          , As we just need those vertices where we have those connection.
+Adding Edge: Adjacency matrix -> O(1)
+             Adjacency List ->   O(1)
+Removing Edge: Adjacency matrix -> O(1)
+               Adjacency matrix -> O(|E|)      , As go through each edge associated with the that vertex in the list.
+Removing Vertex:Adjacency matrix -> O(|V|^2)   , Basically rewriting the whole matrix
+               Adjacency matrix -> O(|V|+|E|)  , we need to go through each value in list in order to remove connection.
+
+List are also more efficient in terms of storage as in matrix, the size may exceed our expectation.
