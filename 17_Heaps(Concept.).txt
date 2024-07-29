@@ -1,0 +1,24 @@
+Heaps can be understood to be structured like a Binary Tree.
+The only difference that can seen is that unlike binary tress,
+the largest number is always present at the top and the descendant numbers are always smaller.
+And also unlike tree, We can have duplicates in the values
+This need to a complete tree to be called a Heap.
+
+
+there are two kinds of heap.
+Max heap -> where the root node has the maximum value
+Min heap -> where the root node has the minimum value
+
+There are two ways of storing heaps in list (heaps are always stored in list)
+ ->The root node is always stored at 0th index.
+ ->The root node is always stored at 1st index.
+
+
+For understanding the maths, we need to visualize that the heap is stored initially from 1st index in the list
+e.g. of a heap stored in list starting from 1st index = | _ | 99 | 72 | 61 | 58 | 55 | 27 | 18 |
+99 is the root node with 72 and 61 as sibling node . 72 is the left child node and 61 is the right child node.
+
+left_child = 2 * parent_index
+right_child = 2 * parent_index + 1
+
+While coding, we will look at the heap that is stored in the list from the index of 0
