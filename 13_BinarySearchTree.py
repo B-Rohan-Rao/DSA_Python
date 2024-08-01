@@ -13,18 +13,17 @@ class BinarySearchTree:
     def __init__(self):  # We can the above constructor or as an alternative, we can  use this where jut create a
         self.root = None  # tree with no value and then add the value with insert method
 
-    # Concept for inserting a node.
-    """
-    create new_node
-    if root == None then root = new_node
-    temp = self.root
-    while loop
+    def insert_value(self, value):
+        """
+        --> Concept for inserting a node.
+        create new_node
+        if root == None then root = new_node
+        temp = self.root
+        while loop
         if new_node == temp return False
         if < left else> right
         if None insert new_node else move to next
-    """
-
-    def insert_value(self, value):
+        """
         new_node = Node(value)
         if self.root is None:
             self.root = new_node
@@ -44,18 +43,17 @@ class BinarySearchTree:
                     return True
                 temp = temp.right
 
-    # Concept for checking the value is present or not
-    """
+    def contain_value(self, value):
+        """
+        -->Concept for checking the value is present or not
         if root == None return False     # This line can be ignored as there it checked in the next line
         temp = root
         while temp is not None
             if < left
             elif > right
             else = return True
-        return False    
+        return False
         """
-
-    def contain_value(self, value):
         temp = self.root
         while temp is not None:
             if value < temp.value:
